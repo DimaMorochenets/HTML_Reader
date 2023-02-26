@@ -1,14 +1,16 @@
 /**
- * @file main.cpp
- * @author Dmytro Morochenets 
- * @brief Startup source file of project
- * @version 0.0.1
- * @date 2023-02-26
+ * @file        main.cpp
+ * @author      Dmytro Morochenets 
+ * @brief       Startup source file of project
+ * @version     0.0.1
+ * @date        2023-02-26
  * 
- * @copyright Copyright (c) 2023
+ * @copyright   Copyright (c) 2023
  */
 
 #include <iostream>
+
+#include "Reader.h"
 
 /**
  * @brief main - The initial point of executing process
@@ -16,7 +18,7 @@
  */
 int main()
 {
-    std::cout << "Process executed!" << std::endl;
+    HTML::Reader newReader;
 
     return 0;
 }

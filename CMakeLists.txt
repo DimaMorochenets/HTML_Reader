@@ -11,12 +11,14 @@ set(SOURCES_DIR ${PROJECT_SOURCE_DIR}/sources)
 set(SRC_DIR     ${SOURCES_DIR}/src)
 set(INCLUDE_DIR ${SOURCES_DIR}/include)
 
-set(SOURCE_FILES ${SRC_DIR}/main.cpp)
+set(SOURCE_FILES 
+    ${SRC_DIR}/main.cpp
+    ${SRC_DIR}/Reader.cpp)
 
-message(STATUS ${SOURCES_DIR})
-message(STATUS ${SRC_DIR})
-message(STATUS ${INCLUDE_DIR})
-message(STATUS ${SOURCE_FILES})
+set(HEADER_FILES
+    ${INCLUDE_DIR}/Reader.h)
 
-add_executable(${EXECUT_NAME} ${SRC_DIR})
+add_executable(${EXECUT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
+
 set_target_properties(${EXECUT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
+target_include_directories(${EXECUT_NAME} PRIVATE ${INCLUDE_DIR})

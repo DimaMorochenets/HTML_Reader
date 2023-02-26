@@ -13,6 +13,8 @@
 
 #include <string>
 
+#include "Page.h"
+
 /**
  * @brief Main namespace of project
  *        All futures will be implemented in scope of this namespace
@@ -27,20 +29,29 @@ namespace HTML
     class Reader
     {
     private:
-        std::string page;                   /// Store html-page (need to create an internal class for storing page in process memory)
+        Page page;                      /// Store html-page
     public:
         /**
          * @brief Default constuctor of class
          * Creates an instance of class and initializes all members to default values
          */
-        Reader();
+        Reader() noexcept;
 
         /**
          * @brief Classic constructor of class
          * Creates an instance and initilizes all members by provided values
+         * 
          * @param page - external html-page
          */
-        Reader(const std::string& page);
+        Reader(const std::string& page) noexcept;
+
+        /**
+         * @brief Classic constructor of class
+         * Creates an instance and initilizes all members by provided values
+         * 
+         * @param path - path to external html-page
+         */
+        Reader(const std::filesystem::path& path) noexcept;
 
         /**
          * @brief Copy constuctor
@@ -49,7 +60,7 @@ namespace HTML
          * 
          * @param instance - instance of class for copying
          */
-        Reader(const Reader& instance);
+        Reader(const Reader& instance) noexcept;
 
         /**
          * @brief Move constructor
@@ -57,7 +68,7 @@ namespace HTML
          * 
          * @param instance - instance of class for moving (rvalue)
          */
-        Reader(Reader&& instance);
+        Reader(Reader&& instance) noexcept;
     };
 } // namesape HTML
 

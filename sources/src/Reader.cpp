@@ -14,22 +14,27 @@
 
 namespace HTML
 {
-    Reader::Reader()
+    Reader::Reader() noexcept
     {
-        this->page = "";
+        this->page = Page();
     }
 
-    Reader::Reader(const std::string& page)
+    Reader::Reader(const std::string& page) noexcept
     {
-        this->page = page;
+        this->page = Page(page);
     }
 
-    Reader::Reader(const Reader& instance)
+    Reader::Reader(const std::filesystem::path& path) noexcept
     {
-        this->page = instance.page;
+        this->page = Page(path);
     }
 
-    Reader::Reader(Reader&& instance)
+    Reader::Reader(const Reader& instance) noexcept
+    {
+        this->page = Page(instance.page);
+    }
+
+    Reader::Reader(Reader&& instance) noexcept
     {
         this->page = std::move(instance.page);
     }

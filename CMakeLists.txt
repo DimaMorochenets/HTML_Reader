@@ -13,10 +13,12 @@ set(INCLUDE_DIR ${SOURCES_DIR}/include)
 
 set(SOURCE_FILES 
     ${SRC_DIR}/main.cpp
-    ${SRC_DIR}/Reader.cpp)
+    ${SRC_DIR}/Reader.cpp
+    ${SRC_DIR}/Page.cpp)
 
 set(HEADER_FILES
-    ${INCLUDE_DIR}/Reader.h)
+    ${INCLUDE_DIR}/Reader.h
+    ${INCLUDE_DIR}/Page.h)
 
 add_executable(${EXECUT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 

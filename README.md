@@ -24,6 +24,7 @@ for parsing and storing specified information from HTML documents
 ### Phase 3
 - Create error manager (full error definition, error handler, error manager)
 - Add class for exporting data to specified file type
+- Add unit tests
 - Add supporting project as a submodule in other projects
 - Finalize project architecture (code documentation, Updating README, freezing version)
 

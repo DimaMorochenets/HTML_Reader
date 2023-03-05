@@ -17,7 +17,7 @@
 
 /**
  * @brief Main namespace of project
- *        All futures will be implemented in scope of this namespace
+ *        All features will be implemented in scope of this namespace
  */
 namespace HTML
 {

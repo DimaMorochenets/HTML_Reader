@@ -8,7 +8,7 @@ Also in plane of phase included adding managing loading HTML documents from diff
 ### Step 1
 - Add global namespace of project
 - Create header file and interface of main class
-- Implement basic futures for main class
+- Implement basic features for main class
 
 ### Step 2
 - Add namespace of logger (optional)

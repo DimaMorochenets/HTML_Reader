@@ -18,7 +18,8 @@
  */
 int main()
 {
-    HTML::Reader newReader;
+    std::filesystem::path pt("E:/temp.html");
+    HTML::Reader newReader(pt);
 
     return 0;
 }

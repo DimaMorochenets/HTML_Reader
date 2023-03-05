@@ -11,6 +11,7 @@
 #include "Reader.h"
 
 #include <utility>
+#include <iostream>
 
 namespace HTML
 {

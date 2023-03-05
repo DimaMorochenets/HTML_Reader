@@ -12,15 +12,18 @@ set(SRC_DIR     ${SOURCES_DIR}/src)
 set(INCLUDE_DIR ${SOURCES_DIR}/include)
 
 set(SOURCE_FILES 
-    ${SRC_DIR}/main.cpp
+    ${SRC_DIR}/Page/Head.cpp
+    ${SRC_DIR}/Page/Page.cpp
     ${SRC_DIR}/Reader.cpp
-    ${SRC_DIR}/Page.cpp)
+    ${SRC_DIR}/main.cpp)
 
 set(HEADER_FILES
-    ${INCLUDE_DIR}/Reader.h
-    ${INCLUDE_DIR}/Page.h)
+    ${INCLUDE_DIR}/Page/Common.h
+    ${INCLUDE_DIR}/Page/Head.h
+    ${INCLUDE_DIR}/Page/Page.h
+    ${INCLUDE_DIR}/Reader.h)
 
 add_executable(${EXECUT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 
 set_target_properties(${EXECUT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
-target_include_directories(${EXECUT_NAME} PRIVATE ${INCLUDE_DIR})
+target_include_directories(${EXECUT_NAME} PRIVATE ${INCLUDE_DIR} ${INCLUDE_DIR}/Page)

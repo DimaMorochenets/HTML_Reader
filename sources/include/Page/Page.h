@@ -11,7 +11,10 @@
 #ifndef PAGE_H
 #define PAGE_H
 
+#include "Common.h"
+
 #include <string>
+#include <sstream>
 #include <utility>
 #include <filesystem>
 
@@ -24,7 +27,7 @@ namespace HTML
     {
     private:
         std::filesystem::path path;     // Path to provided HTML page (if is empty, then page stored as internal)
-        std::string data;               // Store all data of provided HTML page
+        std::stringstream data;         // Store all data of provided HTML page
 
         /**
          * @brief Function for loading HTML page by path
